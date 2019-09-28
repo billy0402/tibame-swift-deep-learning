@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyHandWriting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-2x-TwJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ff3-2x-TwJ" secondAttribute="height" id="5Vh-cR-oZA"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yu0-Uj-lOW">
+                                <rect key="frame" x="0.0" y="458" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGI-z8-Uy2">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="be3-of-aoZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EII-5l-MHz">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                                        <state key="normal" title="Predict"/>
+                                        <connections>
+                                            <action selector="predictButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uc9-Q1-7Cw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="51e-SW-kjM"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Esb-hT-zOv">
+                                <rect key="frame" x="207" y="508" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Esb-hT-zOv" secondAttribute="height" id="Oud-Oi-lJp"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmK-11-E1L">
+                                <rect key="frame" x="0.0" y="508" width="207" height="354"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kmK-11-E1L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6CS-wu-yQC"/>
+                            <constraint firstItem="Esb-hT-zOv" firstAttribute="top" secondItem="yu0-Uj-lOW" secondAttribute="bottom" id="6Zc-Ja-25k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yu0-Uj-lOW" secondAttribute="trailing" id="6eH-sB-yck"/>
+                            <constraint firstItem="Ff3-2x-TwJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V1h-yb-pjI"/>
+                            <constraint firstItem="yu0-Uj-lOW" firstAttribute="top" secondItem="Ff3-2x-TwJ" secondAttribute="bottom" id="Won-IV-gF2"/>
+                            <constraint firstItem="Esb-hT-zOv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ZTM-Wr-Psx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kmK-11-E1L" secondAttribute="bottom" id="apX-pm-Ygg"/>
+                            <constraint firstItem="Esb-hT-zOv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fJm-AE-hd6"/>
+                            <constraint firstItem="kmK-11-E1L" firstAttribute="top" secondItem="yu0-Uj-lOW" secondAttribute="bottom" id="oux-wg-7dj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ff3-2x-TwJ" secondAttribute="trailing" id="pf2-Bu-Gkd"/>
+                            <constraint firstItem="Ff3-2x-TwJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v3Y-3R-9D5"/>
+                            <constraint firstItem="yu0-Uj-lOW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vhi-fo-uBN"/>
+                            <constraint firstItem="Esb-hT-zOv" firstAttribute="leading" secondItem="kmK-11-E1L" secondAttribute="trailing" id="xS8-B0-9Nd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawBaseView" destination="Ff3-2x-TwJ" id="6E5-kL-dub"/>
+                        <outlet property="resultImageView" destination="Esb-hT-zOv" id="VZk-2Q-ZyH"/>
+                        <outlet property="resultTextView" destination="kmK-11-E1L" id="Pmy-Wt-ToW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
